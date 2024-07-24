@@ -1,0 +1,7 @@
+<div class="container">
+  <input type="text" [(ngModel)]="color" [style.background-color]="color" />
+  <button (click)="addcolor()">Add color</button>
+</div>
+@for(color1 of colorList; track $index){
+<div class="box" [style.background-color]="color1"></div>
+}

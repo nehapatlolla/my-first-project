@@ -4,11 +4,18 @@ import { UserComponent } from './user/user.component';
 
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { CounterComponent } from './counter/counter.component';
+import { ColorGameComponent } from './color-game/color-game.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserComponent, MovieListComponent, CounterComponent],
+  imports: [
+    RouterOutlet,
+    UserComponent,
+    MovieListComponent,
+    CounterComponent,
+    ColorGameComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

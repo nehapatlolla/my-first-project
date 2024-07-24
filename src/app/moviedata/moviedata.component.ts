@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 // import { CommonModule } from '@angular/common';
 // interface Movie {
 //   name: string;
@@ -16,13 +16,11 @@ import { Component, Input } from '@angular/core';
 
 export class MoviedataComponent {
 
-  // Movie[] = [];
-  // constructor() {
-  //   this.movies = 
+  @Input() Movie = {
 
-  @Input() name = "Vikram"
-  @Input() poster = "https://m.media-amazon.com/images/M/MV5BMmJhYTYxMGEtNjQ5NS00MWZiLWEwN2ItYjJmMWE2YTU1YWYxXkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg"
-    @Input() rating =  8.4
-      @Input() summary = "Members of a black ops team must track and eliminate a gang of masked murderers."
+   name :"Vikram",
+  poster :"https://m.media-amazon.com/images/M/MV5BMmJhYTYxMGEtNjQ5NS00MWZiLWEwN2ItYjJmMWE2YTU1YWYxXkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg",
+    rating :  8.4,
+      summary :"Members of a black ops team must track and eliminate a gang of masked murderers."
 
-  }
+  }}

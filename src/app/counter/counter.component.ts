@@ -5,8 +5,21 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './counter.component.html',
-  styleUrl: './counter.component.scss'
+  styleUrl: './counter.component.scss',
 })
 export class CounterComponent {
-
+  like = 10;
+  dislike = 0;
+  likeincrement() {
+    this.like = this.like + 1;
+    this.check();
+  }
+  likedecrement() {
+    this.dislike = this.dislike + 1;
+  }
+  check() {
+    if (this.like > 10) {
+      console.log('you are awesome');
+    }
+  }
 }

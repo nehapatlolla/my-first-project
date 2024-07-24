@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { MoviedataComponent } from './moviedata/moviedata.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

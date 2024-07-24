@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
-.body{
+body{
     margin: 0;
     place-content: center;
-    display: grid;
+    // display: grid;
+display: flex;
     min-height: 100vh;
 }

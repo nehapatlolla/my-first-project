@@ -11,4 +11,15 @@
 <app-user name="teja" />
 <router-outlet /> -->
 <!-- <app-user name="phani" /> -->
-<app-moviedata />
+<!-- <app-moviedata /> -->
+<!-- @for(user of users ; track user.id){
+<app-user [name]="user.name" [img]="user.img" />} -->
+<!-- property binding -->
+@for(movie of movies ; track $index){
+<app-moviedata
+  [name]="movie.name"
+  [poster]="movie.poster"
+  [rating]="movie.rating"
+  [summary]="movie.summary"
+/>
+}

@@ -13,7 +13,7 @@
     />
   </head>
   <body>
-    <header>
+    <!-- <header>
       <ul>
         <li class="icon" style="margin-right: auto">
           <i class="fa-solid fa-film"></i>
@@ -23,16 +23,14 @@
         <li>Language</li>
         <li><input type="text" placeholder="search" />🔍</li>
       </ul>
-    </header>
+    </header> -->
     <div class="wholecontainer">
-      <div *ngFor="let movie of movies" class="container">
-        <img src="{{ movie.poster }}" alt="Extraordinary" />
-        <div class="headingAndRating">
-          <h1>{{ movie.name }}</h1>
-          <p class="rating">⭐ {{ movie.rating }}</p>
-        </div>
-        <p class="summary">{{ movie.summary }}</p>
+      <img src="{{ poster }}" alt="Extraordinary" />
+      <div class="headingAndRating">
+        <h1>{{ name }}</h1>
+        <p class="rating">⭐ {{ rating }}</p>
       </div>
+      <p class="summary">{{ summary }}</p>
     </div>
   </body>
 </html>

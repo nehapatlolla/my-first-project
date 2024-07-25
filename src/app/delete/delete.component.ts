@@ -10,5 +10,4 @@ import { MoviedataComponent } from '../moviedata/moviedata.component';
 })
 export class DeleteComponent {
   @Input() movies: any;
-  @Output() deleteItemEvent = new EventEmitter<void>();
 }

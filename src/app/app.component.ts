@@ -7,6 +7,7 @@ import { CounterComponent } from './counter/counter.component';
 import { ColorGameComponent } from './color-game/color-game.component';
 import { FormsModule } from '@angular/forms';
 import { MoviedataComponent } from './moviedata/moviedata.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 export interface IMovie {
   name: string;
@@ -28,6 +29,7 @@ export interface IMovie {
     RouterOutlet,
     RouterLink,
     MoviedataComponent,
+    MatSlideToggleModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

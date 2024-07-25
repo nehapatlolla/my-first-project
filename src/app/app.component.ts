@@ -134,8 +134,4 @@ export class AppComponent {
       rating: 8.8,
     },
   ];
-  deleteMovieP(movie: IMovie) {
-    let index = this.movies.indexOf(movie);
-    this.movies.splice(index, 1);
-  }
 }

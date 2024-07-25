@@ -21,35 +21,11 @@
 
 <!-- <app-color-game /> -->
 
-<app-movie-list [movies]="movies"></app-movie-list>
+<!-- <app-movie-list [movies]="movies"></app-movie-list> -->
 
-<!-- <div>
-  <form (ngSubmit)="addMovie()">
-    <label for="name">Name:</label>
-    <input id="name" [(ngModel)]="newMovie.name" name="name" required />
-
-    <label for="poster">Poster URL:</label>
-    <input id="poster" [(ngModel)]="newMovie.poster" name="poster" required />
-
-    <label for="rating">Rating:</label>
-    <input
-      id="rating"
-      type="number"
-      [(ngModel)]="newMovie.rating"
-      name="rating"
-      required
-    />
-
-    <label for="summary">Summary:</label>
-    <input
-      id="summary"
-      [(ngModel)]="newMovie.summary"
-      name="summary"
-      required
-    />
-
-    <button type="submit">Add Movie</button>
-  </form>
-
-  <app-movie-list [movies]="movies"></app-movie-list>
-</div> -->
+<nav>
+  <a routerLink="/">Home</a><br />
+  <a routerLink="/movies">Movies</a><br />
+  <a routerLink="/color">color</a><br />
+</nav>
+<router-outlet />

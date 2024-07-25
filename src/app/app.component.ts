@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { UserComponent } from './user/user.component';
 
 import { MovieListComponent } from './movie-list/movie-list.component';
@@ -24,6 +24,8 @@ export interface IMovie {
     CounterComponent,
     ColorGameComponent,
     FormsModule,
+    RouterOutlet,
+    RouterLink,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

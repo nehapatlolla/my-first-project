@@ -34,6 +34,5 @@ export class MoviedataComponent {
 
   onDelete() {
     this.delete.emit(this.Movie);
-    // console.log('deleting.......');
   }
 }

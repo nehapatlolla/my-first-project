@@ -27,4 +27,8 @@ export class MovieListComponent {
     };
     this.movies.push(latestMovie);
   }
+  deleteMovieP(movie: IMovie) {
+    let index = this.movies.indexOf(movie);
+    this.movies.splice(index, 1);
+  }
 }

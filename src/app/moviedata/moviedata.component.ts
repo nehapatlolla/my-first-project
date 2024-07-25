@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CounterComponent } from '../counter/counter.component';
 // import { CommonModule } from '@angular/common';
 // interface Movie {
 //   name: string;
@@ -9,7 +10,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-moviedata',
   standalone: true,
-  imports: [],
+  imports: [CounterComponent],
   templateUrl: './moviedata.component.html',
   styleUrl: './moviedata.component.scss',
 })

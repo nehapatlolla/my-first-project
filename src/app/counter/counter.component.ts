@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './counter.component.scss',
 })
 export class CounterComponent {
-  like = 10;
+  like = 1;
   dislike = 0;
   likeincrement() {
     this.like = this.like + 1;

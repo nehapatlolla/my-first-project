@@ -6,6 +6,7 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { CounterComponent } from './counter/counter.component';
 import { ColorGameComponent } from './color-game/color-game.component';
 import { FormsModule } from '@angular/forms';
+import { MoviedataComponent } from './moviedata/moviedata.component';
 
 export interface IMovie {
   name: string;
@@ -26,6 +27,7 @@ export interface IMovie {
     FormsModule,
     RouterOutlet,
     RouterLink,
+    MoviedataComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -132,4 +134,8 @@ export class AppComponent {
       rating: 8.8,
     },
   ];
+  deleteMovieP(movie: IMovie) {
+    let index = this.movies.indexOf(movie);
+    this.movies.splice(index, 1);
+  }
 }

@@ -38,6 +38,6 @@
 
 <div class="wholecontainer">
   @for(movie of movies ; track $index){
-  <app-moviedata [Movie]="movie" />
+  <app-moviedata [Movie]="movie" (delete)="deleteMovieP($event)" />
   }
 </div>

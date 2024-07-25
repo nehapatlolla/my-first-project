@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CounterComponent } from '../counter/counter.component';
+import { IMovie } from '../app.component';
 // import { CommonModule } from '@angular/common';
 // interface Movie {
 //   name: string;
@@ -24,8 +25,15 @@ export class MoviedataComponent {
       'Members of a black ops team must track and eliminate a gang of masked murderers.',
   };
   show: boolean = true;
+
   // Hide: boolean = false;
   showdescription() {
     this.show = !this.show;
+  }
+  @Output() delete = new EventEmitter<IMovie>();
+
+  onDelete() {
+    this.delete.emit(this.Movie);
+    // console.log('deleting.......');
   }
 }

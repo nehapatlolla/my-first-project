@@ -9,6 +9,11 @@ export const routes: Routes = [
     component: DeleteComponent,
   },
   {
+    path: 'films',
+    redirectTo: '/movies',
+    pathMatch: 'full',
+  },
+  {
     path: 'movies',
     component: MovieListComponent,
   },

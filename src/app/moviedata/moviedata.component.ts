@@ -22,4 +22,9 @@ export class MoviedataComponent {
     summary:
       'Members of a black ops team must track and eliminate a gang of masked murderers.',
   };
+  show: boolean = true;
+  // Hide: boolean = false;
+  showdescription() {
+    this.show = !this.show;
+  }
 }

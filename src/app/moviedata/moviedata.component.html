@@ -5,7 +5,7 @@
       <h1>{{ Movie.name }}</h1>
       <p class="rating">⭐ {{ Movie.rating }}</p>
     </div>
-    <button (click)="showdescription()">Toggle description</button>
+    <button (click)="showdescription()" class="description">⋁</button>
     @if (show) {
     <p class="summary">{{ Movie.summary }}</p>
     }

@@ -1,5 +1,7 @@
-<button (click)="likeincrement()">👍{{ like }}</button>
-<button (click)="likedecrement()">👎{{ dislike }}</button><br />
+<div class="likesbutton">
+  <button (click)="likeincrement()">👍{{ like }}</button>
+  <button (click)="likedecrement()">👎{{ dislike }}</button><br />
+</div>
 
 @if(like-dislike>10){
 <h2>you are awesome</h2>

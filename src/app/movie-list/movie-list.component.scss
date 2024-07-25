@@ -1,9 +1,4 @@
-// .wholecontainer{
 
-//     gap: 3rem;
-//     padding-top: 20px;
-//     max-width: 1440px;
-// }
 .wholecontainer{
      display: grid;
     grid-template-columns: 3fr 3fr 3fr 3fr;
@@ -29,4 +24,21 @@
     .wholecontainer{
         grid-template-columns: 3fr 3fr ;
     }
+}
+.addmovieclass{
+    display: flex;
+    flex-direction: column;
+
+   
+    align-items: center;
+}
+label{
+    text-align: center;
+
+}
+.addButton{
+    width: 100px;
+    background-color: bisque;
+    font-size: 15px;
+   
 }

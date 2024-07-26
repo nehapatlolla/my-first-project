@@ -8,6 +8,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-add-movie',
@@ -25,7 +26,12 @@ import { MatInputModule } from '@angular/material/input';
   styleUrl: './add-movie.component.scss',
 })
 export class AddMovieComponent {
-  @Input() movies: Array<IMovie> = [];
+  movies: any;
+  // @Input() movies: Array<IMovie> = [];
+
+  constructor(public movieservice: MovieService) {
+    this.movies = this.movieservice.movies;
+  }
   name = '';
   poster = '';
   rating = '';

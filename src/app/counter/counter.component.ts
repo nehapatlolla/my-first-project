@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-counter',
   standalone: true,
-  imports: [],
+  imports: [MatButtonModule, MatBadgeModule, MatIconModule],
   templateUrl: './counter.component.html',
   styleUrl: './counter.component.scss',
 })

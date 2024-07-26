@@ -1,6 +1,32 @@
 <div class="likesbutton">
-  <button (click)="likeincrement()">👍{{ like }}</button>
-  <button (click)="likedecrement()">👎{{ dislike }}</button><br />
+  <button
+    color="primary"
+    mat-icon-button
+    (click)="likeincrement()"
+    aria-label="like movie"
+    matBadge="{{ like }}"
+  >
+    <mat-icon
+      aria-hidden="false"
+      aria-label="Example icon"
+      fontIcon="
+        thumb_up"
+    ></mat-icon>
+  </button>
+  <button
+    color="error"
+    mat-icon-button
+    (click)="likedecrement()"
+    aria-label="like movie"
+    matBadge="{{ dislike }}"
+  >
+    <mat-icon
+      aria-hidden="false"
+      aria-label="Example icon"
+      fontIcon="
+    thumb_down"
+    ></mat-icon></button
+  ><br />
 </div>
 
 @if(like-dislike>10){

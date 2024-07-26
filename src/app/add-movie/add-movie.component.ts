@@ -46,3 +46,4 @@ export class AddMovieComponent {
     this.movies.push(latestMovie);
   }
 }
+//create class methods

@@ -1,0 +1,40 @@
+<div class="addmovieclass">
+  <!-- <label for="name">Name:</label>
+    <input type="text" [(ngModel)]="name" required /> -->
+
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="name" required placeholder="Ex. Neha" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Poster</mat-label>
+    <input matInput [(ngModel)]="poster" required placeholder="https/:" />
+  </mat-form-field>
+
+  <!-- <label for="poster">Poster URL:</label>
+    <input type="text" [(ngModel)]="poster" required /> -->
+
+  <mat-form-field>
+    <mat-label>Rating</mat-label>
+    <input matInput [(ngModel)]="rating" required placeholder="0" />
+  </mat-form-field>
+  <!-- <label for="rating">Rating:</label>
+    <input type="number" [(ngModel)]="rating" required /> -->
+
+  <mat-form-field>
+    <mat-label>Summary</mat-label>
+    <input matInput [(ngModel)]="summary" required placeholder="0" />
+  </mat-form-field>
+
+  <!-- <label for="summary">Summary:</label>
+    <input type="text" [(ngModel)]="summary" required /><br /> -->
+  <button
+    mat-raised-button
+    (click)="addMovie()"
+    type="submit"
+    class="addButton"
+  >
+    Add Movie
+  </button>
+</div>

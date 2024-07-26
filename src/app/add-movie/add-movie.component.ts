@@ -1,0 +1,42 @@
+import { Component, Input } from '@angular/core';
+
+import { MoviedataComponent } from '../moviedata/moviedata.component';
+import { FormsModule } from '@angular/forms';
+import { IMovie } from '../app.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
+@Component({
+  selector: 'app-add-movie',
+  standalone: true,
+  imports: [
+    MoviedataComponent,
+    FormsModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+  ],
+  templateUrl: './add-movie.component.html',
+  styleUrl: './add-movie.component.scss',
+})
+export class AddMovieComponent {
+  @Input() movies: Array<IMovie> = [];
+  name = '';
+  poster = '';
+  rating = '';
+  summary = '';
+  addMovie() {
+    let latestMovie: IMovie = {
+      name: this.name,
+      poster: this.poster,
+      rating: +this.rating,
+      summary: this.summary,
+    };
+    this.movies.push(latestMovie);
+  }
+}

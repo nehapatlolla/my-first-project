@@ -8,6 +8,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { AddMovieComponent } from '../add-movie/add-movie.component';
 @Component({
   selector: 'app-movie-list',
   standalone: true,
@@ -19,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    AddMovieComponent,
   ],
   templateUrl: './movie-list.component.html',
   styleUrl: './movie-list.component.scss',
@@ -113,20 +115,6 @@ export class MovieListComponent {
     },
   ];
 
-  name = '';
-  poster = '';
-  rating = '';
-  summary = '';
-
-  addMovie() {
-    let latestMovie: IMovie = {
-      name: this.name,
-      poster: this.poster,
-      rating: +this.rating,
-      summary: this.summary,
-    };
-    this.movies.push(latestMovie);
-  }
   deleteMovieP(movie: IMovie) {
     let index = this.movies.indexOf(movie);
     this.movies.splice(index, 1);

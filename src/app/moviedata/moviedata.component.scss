@@ -27,7 +27,7 @@
 display: flex;
 justify-content: space-between;
 margin-bottom: 0;
-width: 100%;
+// width: 100%;
 align-items: center;
 font-size: 10px;
 }
@@ -37,6 +37,7 @@ img{
     border-radius: 40px;
     // padding-bottom: 10px;
     object-fit: cover;
+    width: 100%;
 
 
 
@@ -60,7 +61,7 @@ h1{
 }
 .description
 {
-    background-color: rgb(230, 156, 156);
+    background-color: rgb(242, 202, 202);
 }
 // .para{
 //     display: flex;

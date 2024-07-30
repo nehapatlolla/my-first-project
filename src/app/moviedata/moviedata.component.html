@@ -4,6 +4,9 @@
     <mat-card-content class="content">
       <div class="headingAndRating">
         <h1>{{ Movie.name }}</h1>
+        <button mat-icon-button class="details" routerLink="/movies/{{ id }}">
+          <mat-icon>info</mat-icon>
+        </button>
         <p class="rating">⭐ {{ Movie.rating }}</p>
       </div>
       <div class="para">

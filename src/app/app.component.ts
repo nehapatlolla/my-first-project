@@ -8,12 +8,15 @@ import { ColorGameComponent } from './color-game/color-game.component';
 import { FormsModule } from '@angular/forms';
 import { MoviedataComponent } from './moviedata/moviedata.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 export interface IMovie {
+  id: string;
   name: string;
   poster: string;
   rating: number;
   summary: string;
+  trailer: string;
 }
 
 @Component({
@@ -30,6 +33,7 @@ export interface IMovie {
     RouterLink,
     MoviedataComponent,
     MatSlideToggleModule,
+    MovieDetailsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

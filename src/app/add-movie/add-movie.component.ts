@@ -42,6 +42,8 @@ export class AddMovieComponent {
       poster: this.poster,
       rating: +this.rating,
       summary: this.summary,
+      id: '',
+      trailer: '',
     };
     this.movies.push(latestMovie);
   }

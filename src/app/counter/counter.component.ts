@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-counter',
   standalone: true,
-  imports: [],
+  imports: [MatButtonModule, MatBadgeModule, MatIconModule],
   templateUrl: './counter.component.html',
   styleUrl: './counter.component.scss',
 })
 export class CounterComponent {
-  like = 10;
+  like = 1;
   dislike = 0;
   likeincrement() {
     this.like = this.like + 1;

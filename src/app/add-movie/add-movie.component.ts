@@ -8,10 +8,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { AddMovieComponent } from '../add-movie/add-movie.component';
 import { MovieService } from '../movie.service';
+
 @Component({
-  selector: 'app-movie-list',
+  selector: 'app-add-movie',
   standalone: true,
   imports: [
     MoviedataComponent,
@@ -21,21 +21,31 @@ import { MovieService } from '../movie.service';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    AddMovieComponent,
   ],
-  templateUrl: './movie-list.component.html',
-  styleUrl: './movie-list.component.scss',
+  templateUrl: './add-movie.component.html',
+  styleUrl: './add-movie.component.scss',
 })
-export class MovieListComponent {
+export class AddMovieComponent {
   movies: any;
   // @Input() movies: Array<IMovie> = [];
 
   constructor(public movieservice: MovieService) {
     this.movies = this.movieservice.movies;
   }
-
-  deleteMovieP(movie: IMovie) {
-    let index = this.movies.indexOf(movie);
-    this.movies.splice(index, 1);
+  name = '';
+  poster = '';
+  rating = '';
+  summary = '';
+  addMovie() {
+    let latestMovie: IMovie = {
+      name: this.name,
+      poster: this.poster,
+      rating: +this.rating,
+      summary: this.summary,
+      id: '',
+      trailer: '',
+    };
+    this.movies.push(latestMovie);
   }
 }
+//create class methods

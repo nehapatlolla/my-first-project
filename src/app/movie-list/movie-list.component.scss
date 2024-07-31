@@ -1,13 +1,9 @@
-// .wholecontainer{
 
-//     gap: 3rem;
-//     padding-top: 20px;
-//     max-width: 1440px;
-// }
 .wholecontainer{
      display: grid;
     grid-template-columns: 3fr 3fr 3fr 3fr;
     max-width: 1440px;
+    // margin: 0;
 }
 
 @media (min-width:800px){
@@ -30,3 +26,4 @@
         grid-template-columns: 3fr 3fr ;
     }
 }
+

@@ -1,10 +1,33 @@
 <body>
-  <div class="container">
+  <mat-card class="container">
     <img src="{{ Movie.poster }}" alt="Extraordinary" />
-    <div class="headingAndRating">
-      <h1>{{ Movie.name }}</h1>
-      <p class="rating">⭐ {{ Movie.rating }}</p>
-    </div>
-    <p class="summary">{{ Movie.summary }}</p>
-  </div>
+    <mat-card-content class="content">
+      <div class="headingAndRating">
+        <h1>{{ Movie.name }}</h1>
+        <button mat-icon-button class="details" routerLink="/movies/{{ id }}">
+          <mat-icon>info</mat-icon>
+        </button>
+        <p class="rating">⭐ {{ Movie.rating }}</p>
+      </div>
+      <div class="para">
+        <button (click)="showdescription()" class="description">
+          <mat-icon>{{
+            show ? "keyboard_arrow_up" : "keyboard_arrow_down"
+          }}</mat-icon>
+        </button>
+        @if (show) {
+        <p class="summary">{{ Movie.summary }}</p>
+        }
+      </div>
+    </mat-card-content>
+    <app-counter />
+    <button
+      (click)="onDelete()"
+      mat-fab
+      aria-label="Example icon button with a delete icon"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+    <!-- <button  color="red" >Delete</button> -->
+  </mat-card>
 </body>

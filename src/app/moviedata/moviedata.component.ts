@@ -29,7 +29,7 @@ import { RouterLink } from '@angular/router';
 })
 export class MoviedataComponent {
   @Input() Movie = {
-    id: '99',
+    id: '',
     name: 'Vikram',
     poster:
       'https://m.media-amazon.com/images/M/MV5BMmJhYTYxMGEtNjQ5NS00MWZiLWEwN2ItYjJmMWE2YTU1YWYxXkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg',
